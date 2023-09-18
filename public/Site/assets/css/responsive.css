@@ -1,0 +1,188 @@
+
+@media (max-width: 576px) {
+
+}
+
+
+@media (max-width: 768px) {
+    .teacherSpeech .member .social {
+        right: 8px;
+        opacity: 1;
+    }
+
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+        font-size: 12px;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+        font-size: 12px;
+    }
+
+    .BannerPart .bannerDiv .bannerTitle h2 {
+        text-align: center;
+        margin: 10px 0 0 0;
+        padding: 0 34px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .CodePart .count-box {
+        padding: 30px 10px;
+    }
+    .CodePart .count-box span {
+        font-size: 17px;
+    }
+    .TeachHead .member .memberBox {
+        display: block;
+    }
+    .TeachHead .member .memberBox .member-info {
+        text-align: center;
+        width:100%;
+    }
+    .TeachHead .member .memberBox .member-info h2 {
+        margin: 10px 0 0 0;
+        font-size: 22px;
+    }
+    .TeachHead .member .memberBox .member-img {
+        width: 100%;
+    }
+    .countsPart .count-box {
+        padding: 30px 20px;
+    }
+    .countsPart .count-box i {
+        font-size: 29px;
+        margin-right: 12px;
+    }
+    .countsPart .count-box span {
+        font-size: 18px;
+    }
+    .countsPart .count-box p {
+        font-size: 15px;
+    }
+    .post-date{
+        font-size: 13px;
+    }
+    .footer .footer-top .footer-info .logo {
+        justify-content: center;
+    }
+    .footer .footer-top .footer-info {
+        text-align: center;
+    }
+    .footer .footer-top h4 {
+        text-align: center;
+    }
+    .HeadNavBar .navbar-brand{
+        display: flex;
+        align-items: center;
+        width: 82%;
+        white-space: unset;
+    }
+    .HeadNavBar .navbar-brand h1{
+        font-size: 16px;
+        color: #FFFFFF;
+        margin: 5px;
+    }
+    .navbar-toggler {
+        background-color: #fbfbfb66;
+        color: rgb(102 102 102 / 19%);
+    }
+
+    .section-header h1 {
+        font-size: 27px;
+        text-transform: capitalize;
+    }
+    .DetailsPage{
+        padding: 30px 0;
+    }
+    .section-header h2{
+        font-size: 30px;
+    }
+    .section-header {
+        padding-bottom: 25px;
+    }
+    .HeadDivTop .LangBtn {
+        font-size: 10px;
+    }
+
+    .HeadDivTop .Icon{
+        padding: 2px 8px;
+    }
+
+    .HeadDivTop .Icon i{
+        font-size: 10px;
+    }
+    .contact .info-box {
+        text-align: center;
+    }
+
+    .navbar .dropdown-toggle::after {
+        font-size: 10px;
+    }
+    .navbar-toggler{
+        padding: 4px;
+        width: 12%;
+    }
+    .navbar-toggler-icon{
+        width: 18px;
+        height: 18px;
+    }
+    .CodePart .count-box p {
+        font-size: 14px;
+    }
+    .swiper-button-next{
+        right: 0;
+    }
+    .swiper-button-prev{
+        left: 0;
+    }
+
+    .NoticePart .feature-box h3 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .NoticePart .feature-box {
+        padding: 10px 6px;
+        border-radius: 5px;
+    }
+
+    .NoticePart .feature-box .checkDown span i {
+        font-size: 14px;
+    }
+    .NoticePart .feature-box i {
+        font-size: 14px;
+    }
+    .NoticePart .feature-box .checkDown span {
+        width: 25px;
+        height: 25px;
+    }
+    .ImportantPart .ImLink a {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .NoticePart {
+        padding: 30px 0 30px 0;
+        background-color: var(--site-bg2);
+    }
+
+}
+
+
+@media (max-width: 992px) {
+    .HeadNavBar .navbar-brand{
+        display: flex;
+        align-items: center;
+        width: 82%;
+        white-space: unset;
+    }
+    .HeadNavBar .navbar-brand h1{
+        font-size: 16px;
+        color: #FFFFFF;
+        margin: 5px;
+    }
+    .navbar-toggler {
+        background-color: #fbfbfb66;
+        color: rgb(102 102 102 / 19%);
+    }
+}

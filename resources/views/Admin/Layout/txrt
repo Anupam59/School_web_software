@@ -1,0 +1,79 @@
+@include('Admin.Common.TopBar')
+
+
+@include('Admin.Common.SideBar')
+
+
+
+<!--begin::Content wrapper-->
+@yield('content')
+<!--end::Content wrapper-->
+
+
+
+@include('Admin.Common.RightBar')
+
+
+@include('Admin.Common.Footer')
+
+
+
+
+
+<div class="col-md-3">
+    <div class="form-group">
+        <label>Period</label>
+        <select class="form-control" id="period_id" name="period_id" required>
+
+        </select>
+    </div>
+</div>
+
+
+
+
+ function PeriodGetData(){
+    axios.post('/PeriodGetData').then(function (response) {
+        var JsonData = response.data;
+        $('#period_id').empty();
+        $('#period_id').append( JsonData );
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Period</label>
+                                        <select class="form-control select2" data-placeholder="Select Period" id="period_id" name="period_id">
+                                            <option value=" " selected="selected">Select Period</option>
+                                            @if($Period)
+                                                @foreach($Period as $PeriodItem)
+                                                    <option value="{{ $PeriodItem->period_id }}" @if($PeriodItem->period_id == $Member->period_id) {{ 'selected' }} @endif > {{ $PeriodItem->period_en_title }}</option>
+                                                @endforeach
+                                            @else
+
+                                            @endif
+                                        </select>
+                                    </div>
+                                </div>
+
+
+
+                               $Period = PeriodModel::where('status',1)->get();
+
+
+
+
+
+
+
+
