@@ -46,7 +46,13 @@
                         <img src="{{asset($Event->event_image)}}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-8 mb-3 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                        <p>{{ __('message.date') }} : {{ $Event->modified_date }}</p>
+                        <p>{{ __('message.date') }} :
+                            @if(session()->get('locale') == 'en')
+                                {{ date('d M Y', strtotime($Event->created_date)) }}
+                            @else
+                                {{ bn_date(date('d M Y', strtotime($Event->created_date))) }}
+                            @endif
+                        </p>
                     </div>
                 </div>
 

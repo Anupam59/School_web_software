@@ -1,3 +1,13 @@
+
+/*@font-face {*/
+/*    font-family: 'Roboto';*/
+/*    src: url('Site/assets/font/Roboto-Regular.ttf');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'Noto Serif Bengali';*/
+/*    src: url('Site/assets/font/NotoSerifBengali-Regular.ttf');*/
+/*}*/
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -6,7 +16,7 @@
     scroll-behavior: smooth;
 
     --site-bg1: #ffffff;
-    --site-bg2: #f0f1ff;
+    --site-bg2: #dddddd;
 
     --site-color1: #92278F;
     --site-color2: #012970;
@@ -38,8 +48,8 @@
 
 
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
+    font-family: 'Noto Serif Bengali','Roboto', serif;
+    color: #444444;
 }
 
 a {
@@ -58,7 +68,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Nunito", sans-serif;
     color: var(--site-color2);
 }
 
@@ -397,7 +406,6 @@ section {
 }
 
 .hero .btn-get-started span {
-  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -529,7 +537,6 @@ section {
 
 
 .about .btn-read-more span {
-  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 1px;
@@ -610,7 +617,6 @@ section {
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", sans-serif;
   font-size: 14px;
 }
 
@@ -923,7 +929,6 @@ section {
   font-size: 36px;
   color: #444444;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
 }
 
 .pricing .price sup {
@@ -969,7 +974,6 @@ section {
   transition: none;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Nunito", sans-serif;
   font-weight: 600;
   transition: 0.3s;
   border: 1px solid #4154f1;
@@ -2055,7 +2059,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   background: #f6f9ff;
-  padding: 0 0 30px 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -2110,7 +2114,7 @@ section {
 }
 
 .footer .footer-top {
-  background: white url(../img/footer-bg.png) no-repeat right top;
+  background: var(--site-color1) url(../img/footer-bg.png) no-repeat right top;
   background-size: contain;
   border-top: 1px solid #e1ecff;
   border-bottom: 1px solid #e1ecff;
@@ -2141,7 +2145,6 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   color: #012970;
-  font-family: "Nunito", sans-serif;
   margin-top: 3px;
 }
 
@@ -2149,26 +2152,25 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Nunito", sans-serif;
 }
 
 .footer .footer-top .social-links a {
-  font-size: 20px;
-  display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
-  line-height: 0;
-  margin-right: 10px;
-  transition: 0.3s;
+    font-size: 20px;
+    display: inline-block;
+    color: rgb(255 255 255 / 86%);
+    line-height: 0;
+    margin-right: 10px;
+    transition: 0.3s;
 }
 
 .footer .footer-top .social-links a:hover {
-  color: #012970;
+    color: rgb(224 235 255);
 }
 
 .footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #012970;
+  color: #FFFFFF;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
@@ -2202,14 +2204,14 @@ section {
 }
 
 .footer .footer-top .footer-links ul a {
-  color: #013289;
+    color: #FFFFFF;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-top .footer-links ul a:hover {
-  color: #4154f1;
+    color: #e1e1e1;
 }
 
 .footer .footer-top .footer-contact p {
@@ -2218,21 +2220,25 @@ section {
 
 .footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 12px;
   color: #012970;
 }
 
 .footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #012970;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #012970;
 }
 
 .footer-top .SiteName{
     font-size: 20px;
     font-weight: bold;
-    color: var(--site-color2);
+    color: #FFFFFF;
+}
+.footer .footer-bottom{
+    background-color: #ddd;
 }
 
 .swiper-slide {
@@ -2391,6 +2397,7 @@ section {
 
 .TeachHead .member .memberBox{
     display: flex;
+    margin-bottom: 10px;
 }
 .TeachHead .member .memberBox .member-img{
     width: 40%;
@@ -2401,16 +2408,36 @@ section {
 .TeachHead .member .memberBox .member-info{
     width: 60%;
     text-align: start;
-    padding: 0px 0 0px 20px;
+    padding: 0 0 0 10px;
 }
-.TeachHead .member .memberBox .member-info h2{
-    margin: 10px 0 20px 0;
+.TeachHead .member .memberBox .member-info h2 {
+    margin:0;
     padding: 0;
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 22px;
+    line-height: 33px;
     font-weight: 700;
     color: #012970;
 }
+.TeachHead .member .memberBox .member-info .social1{
+    display: flex;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 10px 0 5px 0;
+}
+.TeachHead .member .memberBox .member-info .social1 a{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.TeachHead .member .memberBox .member-info .social1 a i{
+    font-size: 16px;
+}
+
 .TeachHead .member .memberBox .member-info-speech p{
     width: 100%;
 }
@@ -2459,7 +2486,6 @@ section {
 .countsPart .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", sans-serif;
   font-size: 20px;
 }
 
@@ -2695,6 +2721,7 @@ color: #848484;
     position: relative;
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
 }
 
 .NewsPart .post-box .post-img {
@@ -3085,7 +3112,6 @@ color: #848484;
 .CodePart .count-box p {
     padding: 0;
     margin: 10px 0 0 0;
-    font-family: "Nunito", sans-serif;
     font-size: 18px;
 }
 

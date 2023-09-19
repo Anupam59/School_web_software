@@ -76,6 +76,7 @@ return [
     'phone' => 'ফোন',
     'address' => 'ঠিকানা',
     'time' => 'সময়',
+    'read_more' => 'আরো পড়ুন',
 
     'index_number' => 'ইনডেক্স নাম্বার',
     'gender' => 'লিঙ্গ',

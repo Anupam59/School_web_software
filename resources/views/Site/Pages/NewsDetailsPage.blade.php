@@ -47,7 +47,13 @@
                         <img src="{{asset($News->news_image)}}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-8 mb-3 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                        <p>{{ __('message.date') }} : {{ $News->modified_date }}</p>
+                        <p>{{ __('message.date') }} :
+                            @if(session()->get('locale') == 'en')
+                                {{ date('d M Y', strtotime($News->created_date)) }}
+                            @else
+                                {{ bn_date(date('d M Y', strtotime($News->created_date))) }}
+                            @endif
+                        </p>
                     </div>
                 </div>
 

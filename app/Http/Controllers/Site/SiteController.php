@@ -43,12 +43,16 @@ class SiteController extends Controller
         $TotalMember = MemberModel::where('status',1)->count();
         $TotalStaffs = StaffsModel::where('status',1)->count();
 
-        $TeacherFirst = TeacherModel::join('designation', 'designation.designation_id', '=', 'teacher.designation_id')
+        $TeacherHH = TeacherModel::join('designation', 'designation.designation_id', '=', 'teacher.designation_id')
             ->select('designation.designation_en_title','designation.designation_bn_title','teacher.*')
             ->where('teacher.status',1)
             ->orderBy('designation.position','asc')
             ->orderBy('teacher.position','asc')
-            ->first();
+            ->limit(2)
+            ->get();
+
+        $TeacherFirst = $TeacherHH[0];
+        $TeacherSecond = $TeacherHH[1];
 
         $PeriodStatus = PeriodModel::where('status',1)->where('period_status',1)->first();
         $StatusPeriodId = $PeriodStatus->period_id;
@@ -85,7 +89,7 @@ class SiteController extends Controller
             ->get();
 
         return view('Site/Pages/HomePage',compact(
-            'Gallery', 'Corner', 'Banner', 'TeacherFirst',
+            'Gallery', 'Corner', 'Banner', 'TeacherFirst','TeacherSecond',
             'MemberFirst','Teacher','Member', 'Link','Event','News','Notice',
             'TotalTeacher','TotalMember','TotalStaffs'));
     }

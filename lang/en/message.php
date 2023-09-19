@@ -78,6 +78,7 @@ return [
     'phone' => 'Phone',
     'address' => 'Address',
     'time' => 'Time',
+    'read_more' => 'Read More',
 
     'index_number' => 'Index Number',
     'gender' => 'Gender',

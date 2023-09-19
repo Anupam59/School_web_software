@@ -1,7 +1,5 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" class="footer">
-
-
     <div class="footer-top">
         <div class="container">
             <div class="row gy-4">
@@ -76,20 +74,23 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="copyright">
-            @if(session()->get('locale') == 'en')
-                &copy; Copyright <strong><span>{{ $SiteCommon->site_en_name }}</span></strong>. All Rights Reserved
-            @else
-                &copy; কপিরাইট <strong><span>{{ $SiteCommon->site_bn_name }}</span></strong>. সমস্ত অধিকার সংরক্ষিত
-            @endif
-        </div>
-        <div class="credits">
-            @if(session()->get('locale') == 'en')
-                Developed by - <a href="#">Anupam Talukdar</a>
-            @else
-                তথ্যপ্রযুক্তি সহযোগী - <a href="#">অনুপম তালুকদার</a>
-            @endif
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="copyright">
+                @if(session()->get('locale') == 'en')
+                    &copy; Copyright <strong><span>{{ $SiteCommon->site_en_name }}</span></strong>. All Rights Reserved
+                @else
+                    &copy; কপিরাইট <strong><span>{{ $SiteCommon->site_bn_name }}</span></strong>. সমস্ত অধিকার সংরক্ষিত
+                @endif
+            </div>
+            <div class="credits">
+                @if(session()->get('locale') == 'en')
+                    Developed by - <a href="#">Anupam Talukdar</a>
+                @else
+                    তথ্যপ্রযুক্তি সহযোগী - <a href="#">অনুপম তালুকদার</a>
+                @endif
+            </div>
         </div>
     </div>
+
 </footer>

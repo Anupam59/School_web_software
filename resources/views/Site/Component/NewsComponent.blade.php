@@ -22,7 +22,13 @@
                                 <div class="post-img">
                                     <img src="{{asset($NewsItem->news_image)}}" class="img-fluid" alt="">
                                 </div>
-                                <span class="post-date">{{ $NewsItem->created_date }}</span>
+                                <span class="post-date">
+                                    @if(session()->get('locale') == 'en')
+                                        {{ date('d M Y', strtotime($NewsItem->created_date)) }}
+                                    @else
+                                        {{ bn_date(date('d M Y', strtotime($NewsItem->created_date))) }}
+                                    @endif
+                                </span>
                                 <h3>
                                     @if(session()->get('locale') == 'en')
                                         {{ $NewsItem->news_en_title }}
@@ -30,7 +36,7 @@
                                         {{ $NewsItem->news_bn_title }}
                                     @endif
                                 </h3>
-                                <a href="{{ url('/news')."/".$NewsItem->news_id }}" class="eadmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                                <a href="{{ url('/news')."/".$NewsItem->news_id }}" class="eadmore stretched-link mt-auto"><span>{{ __('message.read_more') }}</span><i class="bi bi-arrow-right"></i></a>
                             </div>
                         </a>
                     </div>

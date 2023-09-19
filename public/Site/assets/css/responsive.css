@@ -166,6 +166,10 @@
         background-color: var(--site-bg2);
     }
 
+    .TeachHead .member .memberBox .member-info .social1 {
+        justify-content: center;
+    }
+
 }
 
 

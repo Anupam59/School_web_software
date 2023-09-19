@@ -12,14 +12,21 @@ use Intervention\Image\Facades\Image;
 class NoticeController extends Controller
 {
     public function NoticeIndex(){
-        $Notice = NoticeModel::join('users as creator_by', 'creator_by.id', '=', 'notice.creator')
+        $start_date = \request('start_date');
+        $end_date = \request('end_date');
+
+        $query = NoticeModel::join('users as creator_by', 'creator_by.id', '=', 'notice.creator')
             ->leftJoin('users as modifier_by', 'modifier_by.id', '=', 'notice.modifier')
             ->select(
                 'creator_by.name as creator_by',
                 'modifier_by.name as modifier_by',
                 'notice.*'
-            )
-            ->orderBy('notice_id','desc')->paginate(15);
+            );
+        if($start_date && $end_date) {
+            $query = $query->whereBetween('notice.created_date', [$start_date, $end_date]);
+        }
+        $Notice = $query->orderBy('notice_id','desc')->paginate(15);
+
         return view('Admin/Pages/Notice/NoticeIndex',compact('Notice'));
     }
 

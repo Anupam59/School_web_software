@@ -67,7 +67,13 @@
                             <a href="{{ url('/event')."/".$EventItem->event_id }}">
                                 <div class="box">
                                     <img src="{{asset($EventItem->event_image)}}" class="img-fluid" alt="">
-                                    <span class="post-date">{{ $EventItem->created_date }}</span>
+                                    <span class="post-date">
+                                        @if(session()->get('locale') == 'en')
+                                            {{ date('d M Y', strtotime($EventItem->created_date)) }}
+                                        @else
+                                            {{ bn_date(date('d M Y', strtotime($EventItem->created_date))) }}
+                                        @endif
+                                    </span>
                                     <h3>
                                         @if(session()->get('locale') == 'en')
                                             {{ $EventItem->event_en_title }}

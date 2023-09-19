@@ -11,25 +11,25 @@
         <meta name="description" content="@yield('description')"/>
         <meta name="keywords" content="@yield('keywords'),{{ $SiteCommon->site_keyword }}">
         <meta property="og:keywords" content="@yield('keywords'),{{ $SiteCommon->site_keyword }}">
-        <meta property="og:image" content="{{asset($SiteCommon->site_logo)}}"/>
+        <meta property="og:image" content="{{asset('Images/site-info/logoseo.png')}}"/>
     @else
         <title> @yield('title') - {{ $SiteCommon->site_bn_name }}</title>
         <meta property="og:title" content="@yield('title') - {{ $SiteCommon->site_bn_name }}"/>
         <meta name="description" content="@yield('description')"/>
         <meta name="keywords" content="@yield('keywords'),{{ $SiteCommon->site_keyword }}">
         <meta property="og:keywords" content="@yield('keywords'),{{ $SiteCommon->site_keyword }}">
-        <meta property="og:image" content="{{asset($SiteCommon->site_logo)}}"/>
+        <meta property="og:image" content="{{asset('Images/site-info/logoseo.png')}}"/>
     @endif
     <meta name="theme-color" content="#92278F" />
 
 
 
     <!-- Favicons -->
-    <link href="{{asset($SiteCommon->site_logo)}}" rel="icon">
-    <link href="{{asset($SiteCommon->site_logo)}}" rel="apple-touch-icon">
+    <link href="{{asset($SiteCommon->site_favicon)}}" rel="icon">
+    <link href="{{asset($SiteCommon->site_favicon)}}" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&family=Roboto&display=swap" rel="stylesheet">
+
     <!-- Vendor CSS Files -->
     <link href="{{asset('Site/assets/vendor/aos/aos.css')}}" rel="stylesheet">
     <link href="{{asset('Site/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">

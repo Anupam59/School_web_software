@@ -41,6 +41,38 @@
             @endif
 
 
+
+
+
+                <div class="container-fluid">
+                    <form action="{{ url('/admin/notice-list') }}" method="get">
+                        <div class="row mb-2 justify-content-center">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" value="{{ request()->query('start_date') }}" name="start_date" placeholder="start date">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" value="{{ request()->query('end_date') }}" name="end_date" placeholder="end date">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 text-center">
+                                <input id="reset" type="reset" class="btn btn-danger" value="Reset">
+                                <input type="submit" class="btn btn-primary" value="Search">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+
+
+
+
             @if(!$Notice->isEmpty())
 
             <!-- Default box -->

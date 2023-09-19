@@ -42,7 +42,13 @@
 
                     </header>
                     <div class="col-md-8 mb-3 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                        <p><b>{{ __('message.date') }}</b> : {{ $Notice->modified_date }}</p>
+                        <p><b>{{ __('message.date') }}</b> :
+                            @if(session()->get('locale') == 'en')
+                                {{ date('d M Y', strtotime($Notice->created_date)) }}
+                            @else
+                                {{ bn_date(date('d M Y', strtotime($Notice->created_date))) }}
+                            @endif
+                        </p>
                     </div>
                 </div>
 

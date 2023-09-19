@@ -259,7 +259,6 @@ class SiteCommonController extends Controller
             $ResizeImage = Image::make($site_logo)->resize(100,100);
             $url = $Path.$ImageName;
             $url_database = "/".$Path.$ImageName;
-            $ResizeImage ->save($url);
             $OldData = SiteCommonModel::where('site_common_id','=',$id)->select('site_logo')->first();
             $OldImage = $OldData->site_logo;
             $OldImageUrl = substr($OldImage, 1);
@@ -273,6 +272,7 @@ class SiteCommonController extends Controller
             }else{
                 $data['site_logo'] = $url_database;
             }
+            $ResizeImage ->save($url);
         }
 
 
@@ -284,7 +284,6 @@ class SiteCommonController extends Controller
             $ResizeImage = Image::make($site_logo_big)->resize(490,380);
             $url = $Path.$ImageName;
             $url_database = "/".$Path.$ImageName;
-            $ResizeImage ->save($url);
             $OldData = SiteCommonModel::where('site_common_id','=',$id)->select('site_logo_big')->first();
             $OldImage = $OldData->site_logo_big;
             $OldImageUrl = substr($OldImage, 1);
@@ -298,6 +297,7 @@ class SiteCommonController extends Controller
             }else{
                 $data['site_logo_big'] = $url_database;
             }
+            $ResizeImage ->save($url);
         }
 
 
@@ -306,10 +306,9 @@ class SiteCommonController extends Controller
         if ($site_favicon){
             $ImageName ='favicon.'.$site_favicon->getClientOriginalExtension();
             $Path = "Images/site-info/";
-            $ResizeImage = Image::make($site_favicon)->resize(490,380);
+            $ResizeImage = Image::make($site_favicon)->resize(32,32);
             $url = $Path.$ImageName;
             $url_database = "/".$Path.$ImageName;
-            $ResizeImage ->save($url);
             $OldData = SiteCommonModel::where('site_common_id','=',$id)->select('site_favicon')->first();
             $OldImage = $OldData->site_favicon;
             $OldImageUrl = substr($OldImage, 1);
@@ -324,6 +323,7 @@ class SiteCommonController extends Controller
             }else{
                 $data['site_favicon'] = $url_database;
             }
+            $ResizeImage ->save($url);
         }
 
 
@@ -332,10 +332,9 @@ class SiteCommonController extends Controller
         if ($site_default_img){
             $ImageName ='default_img.'.$site_default_img->getClientOriginalExtension();
             $Path = "Images/site-info/";
-            $ResizeImage = Image::make($site_default_img)->resize(490,380);
+            $ResizeImage = Image::make($site_default_img)->resize(340,340);
             $url = $Path.$ImageName;
             $url_database = "/".$Path.$ImageName;
-            $ResizeImage ->save($url);
             $OldData = SiteCommonModel::where('site_common_id','=',$id)->select('site_default_img')->first();
             $OldImage = $OldData->site_default_img;
             $OldImageUrl = substr($OldImage, 1);
@@ -349,6 +348,7 @@ class SiteCommonController extends Controller
             }else{
                 $data['site_default_img'] = $url_database;
             }
+            $ResizeImage ->save($url);
         }
 
 
